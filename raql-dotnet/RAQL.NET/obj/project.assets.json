@@ -41,11 +41,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lfabbri\\projects\\api-query-language\\apl-dotnet\\apl-dotnet\\Higrow.RAQL.csproj",
-      "projectName": "Higrow.RAQL",
-      "projectPath": "C:\\Users\\lfabbri\\projects\\api-query-language\\apl-dotnet\\apl-dotnet\\Higrow.RAQL.csproj",
+      "projectUniqueName": "C:\\Users\\lfabbri\\projects\\api-query-language\\raql-dotnet\\RAQL.NET\\RAQL.NET.csproj",
+      "projectName": "RAQL.NET",
+      "projectPath": "C:\\Users\\lfabbri\\projects\\api-query-language\\raql-dotnet\\RAQL.NET\\RAQL.NET.csproj",
       "packagesPath": "C:\\Users\\lfabbri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lfabbri\\projects\\api-query-language\\apl-dotnet\\apl-dotnet\\obj\\",
+      "outputPath": "C:\\Users\\lfabbri\\projects\\api-query-language\\raql-dotnet\\RAQL.NET\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

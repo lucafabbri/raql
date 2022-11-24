@@ -1,12 +1,12 @@
 ﻿using Antlr4.Runtime;
-using Higrow.RAQL.Visitors;
+using RAQL.NET.Visitors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Higrow.RAQL.Linq
+namespace RAQL.NET.Linq
 {
   public static class AQLlExtension
   {

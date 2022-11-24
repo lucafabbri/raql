@@ -2,7 +2,7 @@
 using System.Linq.Expressions;
 using Antlr4.Runtime.Misc;
 
-namespace Higrow.RAQL.Visitors
+namespace RAQL.NET.Visitors
 {
   public class StringOperationVisitor<TEntity> : RAQLBaseVisitor<Expression<Func<TEntity, bool>>?> where TEntity : class
   {

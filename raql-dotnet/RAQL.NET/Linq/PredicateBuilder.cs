@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Linq.Expressions;
 
-namespace Higrow.RAQL.Linq
+namespace RAQL.NET.Linq
 {
     public static class PredicateBuilder
     {

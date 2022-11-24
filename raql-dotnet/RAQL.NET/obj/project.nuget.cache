@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SJs71eENW38oQ5eAAb4QcVVFNVE7v6LVLfPvMhFc/3okaqTYuuVqvYidgR54c1vCzmuNapLsjQ7RBMEdwK63cQ==",
+  "dgSpecHash": "5KA6jcSZAsU8/n5rYzCpmMqTHD4n5EjTkG8R43/qLlGVp+q68U2JcSjkxGvlHuq6TBwbBkiYA7sVE1Mr8dYsWQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lfabbri\\projects\\api-query-language\\apl-dotnet\\apl-dotnet\\Higrow.RAQL.csproj",
+  "projectFilePath": "C:\\Users\\lfabbri\\projects\\api-query-language\\raql-dotnet\\RAQL.NET\\RAQL.NET.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lfabbri\\.nuget\\packages\\antlr4.runtime.standard\\4.9.2\\antlr4.runtime.standard.4.9.2.nupkg.sha512"
   ],

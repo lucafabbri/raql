@@ -1,67 +1,31 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Linq.Expressions;
 using Antlr4.Runtime.Misc;
-using Higrow.RAQL.Linq;
+using RAQL.NET.Linq;
 
-namespace Higrow.RAQL.Visitors
+namespace RAQL.NET.Visitors
 {
-  public class ClauseVisitor<TEntity> : RAQLBaseVisitor<Expression<Func<TEntity, bool>>> where TEntity : class
-  {
-    public override Expression<Func<TEntity, bool>> VisitClause([NotNull] RAQLParser.ClauseContext context)
+    public class ClauseVisitor<TEntity> : RAQLBaseVisitor<Expression<Func<TEntity, bool>>> where TEntity : class
     {
-      var conjunction = context.conjunction();
-      var clauses = context.clause();
-      var operations = context.operation();
+        public override Expression<Func<TEntity, bool>> VisitClause([NotNull] RAQLParser.ClauseContext context)
+        {
+            var conjunction = context.conjunction();
+            var clauses = context.clause();
+            var operation = context.operation();
 
-      if (conjunction != null)
-      {
-        var isAnd = conjunction.GetText().ToLower().Contains("and");
-        if (clauses != null && operations == null && clauses.Length == 2)
-        {
-          var clause1 = new ClauseVisitor<TEntity>().VisitClause(clauses.First());
-          var clause2 = new ClauseVisitor<TEntity>().VisitClause(clauses.Last());
-          return isAnd ? clause1.And(clause2) : clause1.Or(clause2);
-        }
-        else if (clauses != null && operations != null && clauses.Length == 1 && operations.Length == 1)
-        {
-          var clause = new ClauseVisitor<TEntity>().VisitClause(clauses.First());
-          if (operations != null && operations.Length == 1)
-          {
-            var operation = new OperationVisitor<TEntity>().VisitOperation(operations.First());
-            if (operation != null)
+            if (conjunction != null && clauses.Length == 2)
             {
-              return isAnd ? clause.And(operation) : clause.Or(operation);
+                var isAnd = conjunction.GetText().ToLower().Contains("and");
+                var clause1 = new ClauseVisitor<TEntity>().VisitClause(clauses.First());
+                var clause2 = new ClauseVisitor<TEntity>().VisitClause(clauses.Last());
+                return isAnd ? clause1.And(clause2) : clause1.Or(clause2);
             }
-            else
+            else if (conjunction is null && operation != null)
             {
-              return isAnd ? PredicateBuilder.False<TEntity>() : clause;
+                return new OperationVisitor<TEntity>().VisitOperation(operation) ?? PredicateBuilder.False<TEntity>();
             }
-          }
-        }
-        else if (clauses == null && operations != null && operations.Length == 2)
-        {
-          var operation1 = new OperationVisitor<TEntity>().VisitOperation(operations.First());
-          var operation2 = new OperationVisitor<TEntity>().VisitOperation(operations.Last());
-          if (operation1 != null && operation2 != null)
-          {
-            return isAnd ? operation1.And(operation2) : operation1.Or(operation2);
-          }
-          else if (operation1 != null && operation2 == null)
-          {
-            return isAnd ? PredicateBuilder.False<TEntity>() : operation1;
-          }
-          else if (operation1 == null && operation2 != null)
-          {
-            return isAnd ? PredicateBuilder.False<TEntity>() : operation2;
-          }
-        }
-      }
-      else if (conjunction is null && operations.Length == 1)
-      {
-        return new OperationVisitor<TEntity>().VisitOperation(operations.Last()) ?? PredicateBuilder.False<TEntity>();
-      }
 
-      return PredicateBuilder.False<TEntity>();
+            return PredicateBuilder.False<TEntity>();
+        }
     }
-  }
 }

@@ -3,7 +3,7 @@ using System.Linq;
 using System.Reflection;
 using Antlr4.Runtime;
 using Antlr4.Runtime.Tree;
-using Higrow.RAQL.Linq;
+using RAQL.NET.Linq;
 
 //var value = "(x=3 and y>10) or (x in [3,4,5] and y in [6,7,8])";
 var query = "x in [1,2]";
