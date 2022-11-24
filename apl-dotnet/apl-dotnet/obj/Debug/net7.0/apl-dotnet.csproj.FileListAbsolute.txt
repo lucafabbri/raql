@@ -1,0 +1,5 @@
+/Users/rchdeveloper/Documents/GitHub/api-query-language/apl-dotnet/apl-dotnet/obj/Debug/net7.0/apl-dotnet.csproj.AssemblyReference.cache
+/Users/rchdeveloper/Documents/GitHub/api-query-language/apl-dotnet/apl-dotnet/obj/Debug/net7.0/apl-dotnet.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rchdeveloper/Documents/GitHub/api-query-language/apl-dotnet/apl-dotnet/obj/Debug/net7.0/apl-dotnet.AssemblyInfoInputs.cache
+/Users/rchdeveloper/Documents/GitHub/api-query-language/apl-dotnet/apl-dotnet/obj/Debug/net7.0/apl-dotnet.AssemblyInfo.cs
+/Users/rchdeveloper/Documents/GitHub/api-query-language/apl-dotnet/apl-dotnet/obj/Debug/net7.0/apl-dotnet.csproj.CoreCompileInputs.cache
