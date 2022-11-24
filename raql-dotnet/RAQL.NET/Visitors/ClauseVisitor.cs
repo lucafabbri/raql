@@ -20,6 +20,10 @@ namespace RAQL.NET.Visitors
                 var clause2 = new ClauseVisitor<TEntity>().VisitClause(clauses.Last());
                 return isAnd ? clause1.And(clause2) : clause1.Or(clause2);
             }
+            else if (conjunction is null && clauses.Length == 1)
+            {
+                return new ClauseVisitor<TEntity>().VisitClause(clauses.First());
+            }
             else if (conjunction is null && operation != null)
             {
                 return new OperationVisitor<TEntity>().VisitOperation(operation) ?? PredicateBuilder.False<TEntity>();
