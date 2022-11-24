@@ -3,7 +3,7 @@
     <Files>
       <File FileName="Program.cs" Line="10" Column="42" />
       <File FileName="apl-dotnet.csproj" />
-      <File FileName="APLGrammarLexer.cs" Line="56" Column="1" />
+      <File FileName="APLGrammarLexer.cs" />
       <File FileName="APLGrammarParser.cs" />
     </Files>
     <Pads>
