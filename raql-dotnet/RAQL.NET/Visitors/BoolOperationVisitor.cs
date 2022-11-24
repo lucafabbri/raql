@@ -4,51 +4,55 @@ using Antlr4.Runtime.Misc;
 
 namespace RAQL.NET.Visitors
 {
-  public class BoolOperationVisitor<TEntity> : RAQLBaseVisitor<Expression<Func<TEntity, bool>>?> where TEntity : class
-  {
-    public override Expression<Func<TEntity, bool>> VisitBool_operation([NotNull] RAQLParser.Bool_operationContext context)
+    public class BoolOperationVisitor<TEntity> : RAQLBaseVisitor<Expression<Func<TEntity, bool>>?> where TEntity : class
     {
-      var field = context.field()?.GetText();
-      var @operator = context.bool_operator()?.GetText().ToLower().Trim();
-      var value = context.@bool()?.GetText() == "true";
-
-      if (field != null && @operator != null)
-      {
-        try
+        public override Expression<Func<TEntity, bool>> VisitBool_operation([NotNull] RAQLParser.Bool_operationContext context)
         {
-          var prop = typeof(TEntity).GetProperty(field);
-          var attribute = typeof(TEntity).GetField(field);
+            var field = context.field()?.GetText();
+            var @operator = context.bool_operator()?.GetText().ToLower().Trim();
+            var value = context.@bool()?.GetText() == "true";
 
-          if (prop != null && prop.PropertyType == typeof(bool))
-          {
-            switch (@operator)
+            if (field != null && @operator != null)
             {
-              case "!=":
-                return c => (bool)prop.GetValue(c) != value;
-              case "=":
-              default:
-                return c => (bool)prop.GetValue(c) == value;
-            }
-          }
-          else if (attribute != null && attribute.FieldType == typeof(bool))
-          {
-            switch (@operator)
-            {
-              case "!=":
-                return c => (bool)attribute.GetValue(c) != value;
-              case "=":
-              default:
-                return c => (bool)attribute.GetValue(c) == value;
-            }
-          }
-        }
-        catch
-        {
-          //do nothing
-        }
-      }
+                try
+                {
+                    var prop = typeof(TEntity).GetProperty(field);
+                    var attribute = typeof(TEntity).GetField(field);
 
-      return null;
+                    if (prop != null && prop.PropertyType == typeof(bool))
+                    {
+                        switch (@operator)
+                        {
+                            case "not equals":
+                            case "!=":
+                                return c => (bool)prop.GetValue(c) != value;
+                            case "equals":
+                            case "=":
+                            default:
+                                return c => (bool)prop.GetValue(c) == value;
+                        }
+                    }
+                    else if (attribute != null && attribute.FieldType == typeof(bool))
+                    {
+                        switch (@operator)
+                        {
+                            case "not equals":
+                            case "!=":
+                                return c => (bool)attribute.GetValue(c) != value;
+                            case "equals":
+                            case "=":
+                            default:
+                                return c => (bool)attribute.GetValue(c) == value;
+                        }
+                    }
+                }
+                catch
+                {
+                    //do nothing
+                }
+            }
+
+            return null;
+        }
     }
-  }
 }

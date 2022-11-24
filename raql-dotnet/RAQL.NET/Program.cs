@@ -6,7 +6,7 @@ using Antlr4.Runtime.Tree;
 using RAQL.NET.Linq;
 
 //var value = "(x=3 and y>10) or (x in [3,4,5] and y in [6,7,8])";
-var query = "x in [1,2] and (y = 2 or y = 4)";
+var query = "x in [1,2] and (y equals 2 or y not equals 4";
 
 IEnumerable<Vector> vectors = new List<Vector>()
     {
