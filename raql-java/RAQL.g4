@@ -5,7 +5,7 @@ grammar RAQL;
 
 clause:
 	operation
-	| '(' WS? clause WS? ')'
+	| '(' ' '? clause ' '? ')'
 	| clause conjunction clause;
 conjunction: CONJUNCTIONS;
 operation:

@@ -16,9 +16,9 @@ public class RAQLParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, IN=6, BASE_OPERATOR=7, STRING_OPERATOR=8, 
-		NUMBER_OPERATOR=9, CONJUNCTIONS=10, NUMBER=11, WORD=12, STRING=13, BOOLEAN=14, 
-		NULL=15, WS=16;
+		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, IN=7, BASE_OPERATOR=8, 
+		STRING_OPERATOR=9, NUMBER_OPERATOR=10, CONJUNCTIONS=11, NUMBER=12, WORD=13, 
+		STRING=14, BOOLEAN=15, NULL=16;
 	public static final int
 		RULE_clause = 0, RULE_conjunction = 1, RULE_operation = 2, RULE_string_array_operation = 3, 
 		RULE_number_array_operation = 4, RULE_bool_array_operation = 5, RULE_array_operator = 6, 
@@ -39,16 +39,16 @@ public class RAQLParser extends Parser {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'('", "')'", "'['", "','", "']'", null, null, null, null, null, 
-			null, null, null, null, "'null'"
+			null, "'('", "' '", "')'", "'['", "','", "']'", null, null, null, null, 
+			null, null, null, null, null, "'null'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, null, null, null, null, null, "IN", "BASE_OPERATOR", "STRING_OPERATOR", 
+			null, null, null, null, null, null, null, "IN", "BASE_OPERATOR", "STRING_OPERATOR", 
 			"NUMBER_OPERATOR", "CONJUNCTIONS", "NUMBER", "WORD", "STRING", "BOOLEAN", 
-			"NULL", "WS"
+			"NULL"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -112,10 +112,6 @@ public class RAQLParser extends Parser {
 		public ClauseContext clause(int i) {
 			return getRuleContext(ClauseContext.class,i);
 		}
-		public List<TerminalNode> WS() { return getTokens(RAQLParser.WS); }
-		public TerminalNode WS(int i) {
-			return getToken(RAQLParser.WS, i);
-		}
 		public ConjunctionContext conjunction() {
 			return getRuleContext(ConjunctionContext.class,0);
 		}
@@ -161,10 +157,10 @@ public class RAQLParser extends Parser {
 				setState(46);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				if (_la==WS) {
+				if (_la==T__1) {
 					{
 					setState(45);
-					match(WS);
+					match(T__1);
 					}
 				}
 
@@ -173,15 +169,15 @@ public class RAQLParser extends Parser {
 				setState(50);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				if (_la==WS) {
+				if (_la==T__1) {
 					{
 					setState(49);
-					match(WS);
+					match(T__1);
 					}
 				}
 
 				setState(52);
-				match(T__1);
+				match(T__2);
 				}
 				break;
 			default:
@@ -870,17 +866,17 @@ public class RAQLParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(119);
-				match(T__2);
+				match(T__3);
 				setState(120);
 				string();
 				setState(125);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				while (_la==T__3) {
+				while (_la==T__4) {
 					{
 					{
 					setState(121);
-					match(T__3);
+					match(T__4);
 					setState(122);
 					string();
 					}
@@ -890,16 +886,16 @@ public class RAQLParser extends Parser {
 					_la = _input.LA(1);
 				}
 				setState(128);
-				match(T__4);
+				match(T__5);
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(130);
-				match(T__2);
+				match(T__3);
 				setState(131);
-				match(T__4);
+				match(T__5);
 				}
 				break;
 			}
@@ -969,17 +965,17 @@ public class RAQLParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(136);
-				match(T__2);
+				match(T__3);
 				setState(137);
 				number();
 				setState(142);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				while (_la==T__3) {
+				while (_la==T__4) {
 					{
 					{
 					setState(138);
-					match(T__3);
+					match(T__4);
 					setState(139);
 					number();
 					}
@@ -989,16 +985,16 @@ public class RAQLParser extends Parser {
 					_la = _input.LA(1);
 				}
 				setState(145);
-				match(T__4);
+				match(T__5);
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(147);
-				match(T__2);
+				match(T__3);
 				setState(148);
-				match(T__4);
+				match(T__5);
 				}
 				break;
 			}
@@ -1068,17 +1064,17 @@ public class RAQLParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(153);
-				match(T__2);
+				match(T__3);
 				setState(154);
 				bool();
 				setState(159);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				while (_la==T__3) {
+				while (_la==T__4) {
 					{
 					{
 					setState(155);
-					match(T__3);
+					match(T__4);
 					setState(156);
 					bool();
 					}
@@ -1088,16 +1084,16 @@ public class RAQLParser extends Parser {
 					_la = _input.LA(1);
 				}
 				setState(162);
-				match(T__4);
+				match(T__5);
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(164);
-				match(T__2);
+				match(T__3);
 				setState(165);
-				match(T__4);
+				match(T__5);
 				}
 				break;
 			}
@@ -1142,39 +1138,39 @@ public class RAQLParser extends Parser {
 		"\3\24\3\24\3\24\7\24\u008f\n\24\f\24\16\24\u0092\13\24\3\24\3\24\3\24"+
 		"\3\24\5\24\u0098\n\24\3\25\3\25\3\26\3\26\3\26\3\26\7\26\u00a0\n\26\f"+
 		"\26\16\26\u00a3\13\26\3\26\3\26\3\26\3\26\5\26\u00a9\n\26\3\26\2\3\2\27"+
-		"\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(*\2\4\3\2\t\n\4\2\t\t\13"+
-		"\13\2\u00a6\28\3\2\2\2\4C\3\2\2\2\6K\3\2\2\2\bM\3\2\2\2\nQ\3\2\2\2\fU"+
-		"\3\2\2\2\16Y\3\2\2\2\20[\3\2\2\2\22a\3\2\2\2\24c\3\2\2\2\26g\3\2\2\2\30"+
+		"\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(*\2\4\3\2\n\13\4\2\n\n\f"+
+		"\f\2\u00a6\28\3\2\2\2\4C\3\2\2\2\6K\3\2\2\2\bM\3\2\2\2\nQ\3\2\2\2\fU\3"+
+		"\2\2\2\16Y\3\2\2\2\20[\3\2\2\2\22a\3\2\2\2\24c\3\2\2\2\26g\3\2\2\2\30"+
 		"i\3\2\2\2\32m\3\2\2\2\34r\3\2\2\2\36u\3\2\2\2 w\3\2\2\2\"\u0086\3\2\2"+
 		"\2$\u0088\3\2\2\2&\u0097\3\2\2\2(\u0099\3\2\2\2*\u00a8\3\2\2\2,-\b\2\1"+
-		"\2-9\5\6\4\2.\60\7\3\2\2/\61\7\22\2\2\60/\3\2\2\2\60\61\3\2\2\2\61\62"+
-		"\3\2\2\2\62\64\5\2\2\2\63\65\7\22\2\2\64\63\3\2\2\2\64\65\3\2\2\2\65\66"+
-		"\3\2\2\2\66\67\7\4\2\2\679\3\2\2\28,\3\2\2\28.\3\2\2\29@\3\2\2\2:;\f\3"+
-		"\2\2;<\5\4\3\2<=\5\2\2\4=?\3\2\2\2>:\3\2\2\2?B\3\2\2\2@>\3\2\2\2@A\3\2"+
-		"\2\2A\3\3\2\2\2B@\3\2\2\2CD\7\f\2\2D\5\3\2\2\2EL\5\f\7\2FL\5\n\6\2GL\5"+
-		"\b\5\2HL\5\30\r\2IL\5\24\13\2JL\5\20\t\2KE\3\2\2\2KF\3\2\2\2KG\3\2\2\2"+
-		"KH\3\2\2\2KI\3\2\2\2KJ\3\2\2\2L\7\3\2\2\2MN\5\34\17\2NO\5\16\b\2OP\5\""+
+		"\2-9\5\6\4\2.\60\7\3\2\2/\61\7\4\2\2\60/\3\2\2\2\60\61\3\2\2\2\61\62\3"+
+		"\2\2\2\62\64\5\2\2\2\63\65\7\4\2\2\64\63\3\2\2\2\64\65\3\2\2\2\65\66\3"+
+		"\2\2\2\66\67\7\5\2\2\679\3\2\2\28,\3\2\2\28.\3\2\2\29@\3\2\2\2:;\f\3\2"+
+		"\2;<\5\4\3\2<=\5\2\2\4=?\3\2\2\2>:\3\2\2\2?B\3\2\2\2@>\3\2\2\2@A\3\2\2"+
+		"\2A\3\3\2\2\2B@\3\2\2\2CD\7\r\2\2D\5\3\2\2\2EL\5\f\7\2FL\5\n\6\2GL\5\b"+
+		"\5\2HL\5\30\r\2IL\5\24\13\2JL\5\20\t\2KE\3\2\2\2KF\3\2\2\2KG\3\2\2\2K"+
+		"H\3\2\2\2KI\3\2\2\2KJ\3\2\2\2L\7\3\2\2\2MN\5\34\17\2NO\5\16\b\2OP\5\""+
 		"\22\2P\t\3\2\2\2QR\5\34\17\2RS\5\16\b\2ST\5&\24\2T\13\3\2\2\2UV\5\34\17"+
-		"\2VW\5\16\b\2WX\5*\26\2X\r\3\2\2\2YZ\7\b\2\2Z\17\3\2\2\2[\\\5\34\17\2"+
+		"\2VW\5\16\b\2WX\5*\26\2X\r\3\2\2\2YZ\7\t\2\2Z\17\3\2\2\2[\\\5\34\17\2"+
 		"\\_\5\22\n\2]`\5 \21\2^`\5\36\20\2_]\3\2\2\2_^\3\2\2\2`\21\3\2\2\2ab\t"+
 		"\2\2\2b\23\3\2\2\2cd\5\34\17\2de\5\26\f\2ef\5$\23\2f\25\3\2\2\2gh\t\3"+
-		"\2\2h\27\3\2\2\2ij\5\34\17\2jk\5\32\16\2kl\5(\25\2l\31\3\2\2\2mn\7\t\2"+
-		"\2n\33\3\2\2\2oq\7\16\2\2po\3\2\2\2qt\3\2\2\2rp\3\2\2\2rs\3\2\2\2s\35"+
-		"\3\2\2\2tr\3\2\2\2uv\7\21\2\2v\37\3\2\2\2wx\7\17\2\2x!\3\2\2\2yz\7\5\2"+
-		"\2z\177\5 \21\2{|\7\6\2\2|~\5 \21\2}{\3\2\2\2~\u0081\3\2\2\2\177}\3\2"+
+		"\2\2h\27\3\2\2\2ij\5\34\17\2jk\5\32\16\2kl\5(\25\2l\31\3\2\2\2mn\7\n\2"+
+		"\2n\33\3\2\2\2oq\7\17\2\2po\3\2\2\2qt\3\2\2\2rp\3\2\2\2rs\3\2\2\2s\35"+
+		"\3\2\2\2tr\3\2\2\2uv\7\22\2\2v\37\3\2\2\2wx\7\20\2\2x!\3\2\2\2yz\7\6\2"+
+		"\2z\177\5 \21\2{|\7\7\2\2|~\5 \21\2}{\3\2\2\2~\u0081\3\2\2\2\177}\3\2"+
 		"\2\2\177\u0080\3\2\2\2\u0080\u0082\3\2\2\2\u0081\177\3\2\2\2\u0082\u0083"+
-		"\7\7\2\2\u0083\u0087\3\2\2\2\u0084\u0085\7\5\2\2\u0085\u0087\7\7\2\2\u0086"+
-		"y\3\2\2\2\u0086\u0084\3\2\2\2\u0087#\3\2\2\2\u0088\u0089\7\r\2\2\u0089"+
-		"%\3\2\2\2\u008a\u008b\7\5\2\2\u008b\u0090\5$\23\2\u008c\u008d\7\6\2\2"+
+		"\7\b\2\2\u0083\u0087\3\2\2\2\u0084\u0085\7\6\2\2\u0085\u0087\7\b\2\2\u0086"+
+		"y\3\2\2\2\u0086\u0084\3\2\2\2\u0087#\3\2\2\2\u0088\u0089\7\16\2\2\u0089"+
+		"%\3\2\2\2\u008a\u008b\7\6\2\2\u008b\u0090\5$\23\2\u008c\u008d\7\7\2\2"+
 		"\u008d\u008f\5$\23\2\u008e\u008c\3\2\2\2\u008f\u0092\3\2\2\2\u0090\u008e"+
 		"\3\2\2\2\u0090\u0091\3\2\2\2\u0091\u0093\3\2\2\2\u0092\u0090\3\2\2\2\u0093"+
-		"\u0094\7\7\2\2\u0094\u0098\3\2\2\2\u0095\u0096\7\5\2\2\u0096\u0098\7\7"+
+		"\u0094\7\b\2\2\u0094\u0098\3\2\2\2\u0095\u0096\7\6\2\2\u0096\u0098\7\b"+
 		"\2\2\u0097\u008a\3\2\2\2\u0097\u0095\3\2\2\2\u0098\'\3\2\2\2\u0099\u009a"+
-		"\7\20\2\2\u009a)\3\2\2\2\u009b\u009c\7\5\2\2\u009c\u00a1\5(\25\2\u009d"+
-		"\u009e\7\6\2\2\u009e\u00a0\5(\25\2\u009f\u009d\3\2\2\2\u00a0\u00a3\3\2"+
+		"\7\21\2\2\u009a)\3\2\2\2\u009b\u009c\7\6\2\2\u009c\u00a1\5(\25\2\u009d"+
+		"\u009e\7\7\2\2\u009e\u00a0\5(\25\2\u009f\u009d\3\2\2\2\u00a0\u00a3\3\2"+
 		"\2\2\u00a1\u009f\3\2\2\2\u00a1\u00a2\3\2\2\2\u00a2\u00a4\3\2\2\2\u00a3"+
-		"\u00a1\3\2\2\2\u00a4\u00a5\7\7\2\2\u00a5\u00a9\3\2\2\2\u00a6\u00a7\7\5"+
-		"\2\2\u00a7\u00a9\7\7\2\2\u00a8\u009b\3\2\2\2\u00a8\u00a6\3\2\2\2\u00a9"+
+		"\u00a1\3\2\2\2\u00a4\u00a5\7\b\2\2\u00a5\u00a9\3\2\2\2\u00a6\u00a7\7\6"+
+		"\2\2\u00a7\u00a9\7\b\2\2\u00a8\u009b\3\2\2\2\u00a8\u00a6\3\2\2\2\u00a9"+
 		"+\3\2\2\2\17\60\648@K_r\177\u0086\u0090\u0097\u00a1\u00a8";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
