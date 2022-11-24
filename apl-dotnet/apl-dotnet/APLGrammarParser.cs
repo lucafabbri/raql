@@ -117,6 +117,16 @@ public partial class APLGrammarParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_clause; } }
 		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.EnterClause(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.ExitClause(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			IAPLGrammarVisitor<TResult> typedVisitor = visitor as IAPLGrammarVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitClause(this);
@@ -270,6 +280,16 @@ public partial class APLGrammarParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_conjunction; } }
 		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.EnterConjunction(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.ExitConjunction(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			IAPLGrammarVisitor<TResult> typedVisitor = visitor as IAPLGrammarVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitConjunction(this);
@@ -323,6 +343,16 @@ public partial class APLGrammarParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_operation; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.EnterOperation(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.ExitOperation(this);
+		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			IAPLGrammarVisitor<TResult> typedVisitor = visitor as IAPLGrammarVisitor<TResult>;
@@ -410,6 +440,16 @@ public partial class APLGrammarParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_string_array_operation; } }
 		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.EnterString_array_operation(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.ExitString_array_operation(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			IAPLGrammarVisitor<TResult> typedVisitor = visitor as IAPLGrammarVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitString_array_operation(this);
@@ -458,6 +498,16 @@ public partial class APLGrammarParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_number_array_operation; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.EnterNumber_array_operation(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.ExitNumber_array_operation(this);
+		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			IAPLGrammarVisitor<TResult> typedVisitor = visitor as IAPLGrammarVisitor<TResult>;
@@ -508,6 +558,16 @@ public partial class APLGrammarParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_bool_array_operation; } }
 		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.EnterBool_array_operation(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.ExitBool_array_operation(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			IAPLGrammarVisitor<TResult> typedVisitor = visitor as IAPLGrammarVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitBool_array_operation(this);
@@ -548,6 +608,16 @@ public partial class APLGrammarParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_array_operator; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.EnterArray_operator(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.ExitArray_operator(this);
+		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			IAPLGrammarVisitor<TResult> typedVisitor = visitor as IAPLGrammarVisitor<TResult>;
@@ -596,6 +666,16 @@ public partial class APLGrammarParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_string_operation; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.EnterString_operation(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.ExitString_operation(this);
+		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			IAPLGrammarVisitor<TResult> typedVisitor = visitor as IAPLGrammarVisitor<TResult>;
@@ -655,6 +735,16 @@ public partial class APLGrammarParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_string_operator; } }
 		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.EnterString_operator(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.ExitString_operator(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			IAPLGrammarVisitor<TResult> typedVisitor = visitor as IAPLGrammarVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitString_operator(this);
@@ -708,6 +798,16 @@ public partial class APLGrammarParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_number_operation; } }
 		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.EnterNumber_operation(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.ExitNumber_operation(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			IAPLGrammarVisitor<TResult> typedVisitor = visitor as IAPLGrammarVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitNumber_operation(this);
@@ -749,6 +849,16 @@ public partial class APLGrammarParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_number_operator; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.EnterNumber_operator(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.ExitNumber_operator(this);
+		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			IAPLGrammarVisitor<TResult> typedVisitor = visitor as IAPLGrammarVisitor<TResult>;
@@ -803,6 +913,16 @@ public partial class APLGrammarParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_bool_operation; } }
 		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.EnterBool_operation(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.ExitBool_operation(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			IAPLGrammarVisitor<TResult> typedVisitor = visitor as IAPLGrammarVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitBool_operation(this);
@@ -844,6 +964,16 @@ public partial class APLGrammarParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_bool_operator; } }
 		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.EnterBool_operator(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.ExitBool_operator(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			IAPLGrammarVisitor<TResult> typedVisitor = visitor as IAPLGrammarVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitBool_operator(this);
@@ -883,6 +1013,16 @@ public partial class APLGrammarParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_field; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.EnterField(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.ExitField(this);
+		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			IAPLGrammarVisitor<TResult> typedVisitor = visitor as IAPLGrammarVisitor<TResult>;
@@ -934,6 +1074,16 @@ public partial class APLGrammarParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_nullstring; } }
 		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.EnterNullstring(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.ExitNullstring(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			IAPLGrammarVisitor<TResult> typedVisitor = visitor as IAPLGrammarVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitNullstring(this);
@@ -970,6 +1120,16 @@ public partial class APLGrammarParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_string; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.EnterString(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.ExitString(this);
+		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			IAPLGrammarVisitor<TResult> typedVisitor = visitor as IAPLGrammarVisitor<TResult>;
@@ -1012,6 +1172,16 @@ public partial class APLGrammarParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_string_array; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.EnterString_array(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.ExitString_array(this);
+		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			IAPLGrammarVisitor<TResult> typedVisitor = visitor as IAPLGrammarVisitor<TResult>;
@@ -1086,6 +1256,16 @@ public partial class APLGrammarParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_number; } }
 		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.EnterNumber(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.ExitNumber(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			IAPLGrammarVisitor<TResult> typedVisitor = visitor as IAPLGrammarVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitNumber(this);
@@ -1127,6 +1307,16 @@ public partial class APLGrammarParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_number_array; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.EnterNumber_array(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.ExitNumber_array(this);
+		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			IAPLGrammarVisitor<TResult> typedVisitor = visitor as IAPLGrammarVisitor<TResult>;
@@ -1201,6 +1391,16 @@ public partial class APLGrammarParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_bool; } }
 		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.EnterBool(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.ExitBool(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			IAPLGrammarVisitor<TResult> typedVisitor = visitor as IAPLGrammarVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitBool(this);
@@ -1242,6 +1442,16 @@ public partial class APLGrammarParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_bool_array; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.EnterBool_array(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IAPLGrammarListener typedListener = listener as IAPLGrammarListener;
+			if (typedListener != null) typedListener.ExitBool_array(this);
+		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			IAPLGrammarVisitor<TResult> typedVisitor = visitor as IAPLGrammarVisitor<TResult>;

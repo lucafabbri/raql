@@ -1,14 +1,21 @@
 ﻿<Properties StartupConfiguration="{914BB57A-3867-4F56-ACC2-A2152A8C6970}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="apl-dotnet.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="Program.cs" Line="1" Column="1" />
-      <File FileName="apl-dotnet.csproj" Line="23" Column="14" />
+      <File FileName="Program.cs" Line="10" Column="42" />
+      <File FileName="apl-dotnet.csproj" />
+      <File FileName="APLGrammarLexer.cs" Line="56" Column="1" />
+      <File FileName="APLGrammarParser.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="apl-dotnet" expanded="True">
-            <Node name="apl-dotnet" expanded="True" selected="True" />
+            <Node name="apl-dotnet" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Program.cs" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>

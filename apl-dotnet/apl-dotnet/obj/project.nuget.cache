@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Q8ewOGw93PovUQZ0m587ZG/DAyQG4IYMsXP/SZvt87Ym+Acedcruo/7t/Jj9HwMhZ07ofzPdNCb+Nz08SylQ0Q==",
+  "dgSpecHash": "WQ5z/4Cu3R5ZVKAKqKYa0a90l1NT2DUTB1SnhZuHCu9mrcL4OKueLpShr0tTMiQYu4IxkpNbrhPfNeN0/EgHEA==",
   "success": true,
   "projectFilePath": "/Users/rchdeveloper/Documents/GitHub/api-query-language/apl-dotnet/apl-dotnet/apl-dotnet.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/rchdeveloper/.nuget/packages/antlr4.runtime.standard/4.9.2/antlr4.runtime.standard.4.9.2.nupkg.sha512"
+  ],
   "logs": []
 }

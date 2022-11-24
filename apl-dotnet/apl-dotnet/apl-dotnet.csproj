@@ -11,4 +11,8 @@
   <ItemGroup>
     <None Remove="Antlr4.Runtime.Standard" />
   </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Antlr4.Runtime.Standard" Version="4.9.2" />
+  </ItemGroup>
 </Project>
