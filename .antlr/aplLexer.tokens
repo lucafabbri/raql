@@ -1,0 +1,17 @@
+T__0=1
+T__1=2
+T__2=3
+T__3=4
+T__4=5
+T__5=6
+OPERATOR=7
+CONJUNCTIONS=8
+NUMBER=9
+STRING=10
+WS=11
+'['=1
+','=2
+']'=3
+'true'=4
+'false'=5
+'null'=6
