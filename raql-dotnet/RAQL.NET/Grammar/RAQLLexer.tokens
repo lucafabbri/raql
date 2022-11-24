@@ -14,7 +14,6 @@ WORD=13
 STRING=14
 BOOLEAN=15
 NULL=16
-WS=17
 '('=1
 ' '=2
 ')'=3

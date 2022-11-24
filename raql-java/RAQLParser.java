@@ -1,4 +1,4 @@
-// Generated from /Users/rchdeveloper/Documents/GitHub/api-query-language/raql-java/RAQL.g4 by ANTLR 4.9.2
+// Generated from RAQL.g4 by ANTLR 4.9.2
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -123,6 +123,14 @@ public class RAQLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_clause; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).enterClause(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).exitClause(this);
+		}
 	}
 
 	public final ClauseContext clause() throws RecognitionException {
@@ -231,6 +239,14 @@ public class RAQLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_conjunction; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).enterConjunction(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).exitConjunction(this);
+		}
 	}
 
 	public final ConjunctionContext conjunction() throws RecognitionException {
@@ -277,6 +293,14 @@ public class RAQLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_operation; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).enterOperation(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).exitOperation(this);
+		}
 	}
 
 	public final OperationContext operation() throws RecognitionException {
@@ -355,6 +379,14 @@ public class RAQLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_string_array_operation; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).enterString_array_operation(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).exitString_array_operation(this);
+		}
 	}
 
 	public final String_array_operationContext string_array_operation() throws RecognitionException {
@@ -396,6 +428,14 @@ public class RAQLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_number_array_operation; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).enterNumber_array_operation(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).exitNumber_array_operation(this);
+		}
 	}
 
 	public final Number_array_operationContext number_array_operation() throws RecognitionException {
@@ -437,6 +477,14 @@ public class RAQLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_bool_array_operation; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).enterBool_array_operation(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).exitBool_array_operation(this);
+		}
 	}
 
 	public final Bool_array_operationContext bool_array_operation() throws RecognitionException {
@@ -470,6 +518,14 @@ public class RAQLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_array_operator; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).enterArray_operator(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).exitArray_operator(this);
+		}
 	}
 
 	public final Array_operatorContext array_operator() throws RecognitionException {
@@ -510,6 +566,14 @@ public class RAQLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_string_operation; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).enterString_operation(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).exitString_operation(this);
+		}
 	}
 
 	public final String_operationContext string_operation() throws RecognitionException {
@@ -560,6 +624,14 @@ public class RAQLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_string_operator; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).enterString_operator(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).exitString_operator(this);
+		}
 	}
 
 	public final String_operatorContext string_operator() throws RecognitionException {
@@ -606,6 +678,14 @@ public class RAQLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_number_operation; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).enterNumber_operation(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).exitNumber_operation(this);
+		}
 	}
 
 	public final Number_operationContext number_operation() throws RecognitionException {
@@ -640,6 +720,14 @@ public class RAQLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_number_operator; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).enterNumber_operator(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).exitNumber_operator(this);
+		}
 	}
 
 	public final Number_operatorContext number_operator() throws RecognitionException {
@@ -686,6 +774,14 @@ public class RAQLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_bool_operation; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).enterBool_operation(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).exitBool_operation(this);
+		}
 	}
 
 	public final Bool_operationContext bool_operation() throws RecognitionException {
@@ -719,6 +815,14 @@ public class RAQLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_bool_operator; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).enterBool_operator(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).exitBool_operator(this);
+		}
 	}
 
 	public final Bool_operatorContext bool_operator() throws RecognitionException {
@@ -751,6 +855,14 @@ public class RAQLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_field; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).enterField(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).exitField(this);
+		}
 	}
 
 	public final FieldContext field() throws RecognitionException {
@@ -793,6 +905,14 @@ public class RAQLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_nullstring; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).enterNullstring(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).exitNullstring(this);
+		}
 	}
 
 	public final NullstringContext nullstring() throws RecognitionException {
@@ -822,6 +942,14 @@ public class RAQLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_string; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).enterString(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).exitString(this);
+		}
 	}
 
 	public final StringContext string() throws RecognitionException {
@@ -856,6 +984,14 @@ public class RAQLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_string_array; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).enterString_array(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).exitString_array(this);
+		}
 	}
 
 	public final String_arrayContext string_array() throws RecognitionException {
@@ -921,6 +1057,14 @@ public class RAQLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_number; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).enterNumber(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).exitNumber(this);
+		}
 	}
 
 	public final NumberContext number() throws RecognitionException {
@@ -955,6 +1099,14 @@ public class RAQLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_number_array; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).enterNumber_array(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).exitNumber_array(this);
+		}
 	}
 
 	public final Number_arrayContext number_array() throws RecognitionException {
@@ -1020,6 +1172,14 @@ public class RAQLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_bool; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).enterBool(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).exitBool(this);
+		}
 	}
 
 	public final BoolContext bool() throws RecognitionException {
@@ -1054,6 +1214,14 @@ public class RAQLParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_bool_array; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).enterBool_array(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof RAQLListener ) ((RAQLListener)listener).exitBool_array(this);
+		}
 	}
 
 	public final Bool_arrayContext bool_array() throws RecognitionException {
