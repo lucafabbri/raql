@@ -1,6 +1,3 @@
-/*
- * Lexer Rules
- */
 grammar RAQL;
 
 clause:
