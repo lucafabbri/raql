@@ -1,5 +1,6 @@
 grammar RAQL;
 
+raql: clause EOF;
 clause:
 	operation
 	| '(' ' '? clause ' '? ')'

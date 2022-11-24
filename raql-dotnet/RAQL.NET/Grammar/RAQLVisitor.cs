@@ -32,6 +32,12 @@ using IToken = Antlr4.Runtime.IToken;
 [System.CLSCompliant(false)]
 public interface IRAQLVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <summary>
+	/// Visit a parse tree produced by <see cref="RAQLParser.raql"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitRaql([NotNull] RAQLParser.RaqlContext context);
+	/// <summary>
 	/// Visit a parse tree produced by <see cref="RAQLParser.clause"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>

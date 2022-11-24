@@ -7,6 +7,16 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface RAQLListener extends ParseTreeListener {
 	/**
+	 * Enter a parse tree produced by {@link RAQLParser#raql}.
+	 * @param ctx the parse tree
+	 */
+	void enterRaql(RAQLParser.RaqlContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link RAQLParser#raql}.
+	 * @param ctx the parse tree
+	 */
+	void exitRaql(RAQLParser.RaqlContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link RAQLParser#clause}.
 	 * @param ctx the parse tree
 	 */

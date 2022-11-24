@@ -15,6 +15,18 @@ public class RAQLBaseListener implements RAQLListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterRaql(RAQLParser.RaqlContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitRaql(RAQLParser.RaqlContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterClause(RAQLParser.ClauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
