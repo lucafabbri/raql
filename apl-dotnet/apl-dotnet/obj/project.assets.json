@@ -1,11 +1,37 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net6.0": {
+      "Antlr4.Runtime.Standard/4.9.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Antlr4.Runtime.Standard.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Antlr4.Runtime.Standard.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Antlr4.Runtime.Standard/4.9.2": {
+      "sha512": "NH/CZeP56ERa+1w7HqlQKXMVBlkNHOWrjF3holW5XgUdyDP36Mw0SynoNj6jD7UNqhxc+4YYfOWXajO3U1Q2dw==",
+      "type": "package",
+      "path": "antlr4.runtime.standard/4.9.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "antlr4.runtime.standard.4.9.2.nupkg.sha512",
+        "antlr4.runtime.standard.nuspec",
+        "lib/netstandard2.0/Antlr4.Runtime.Standard.dll",
+        "lib/netstandard2.0/Antlr4.Runtime.Standard.xml"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net6.0": [
+      "Antlr4.Runtime.Standard >= 4.9.2"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\lfabbri\\.nuget\\packages\\": {},
@@ -15,9 +41,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lfabbri\\projects\\api-query-language\\apl-dotnet\\apl-dotnet\\apl-dotnet.csproj",
-      "projectName": "apl-dotnet",
-      "projectPath": "C:\\Users\\lfabbri\\projects\\api-query-language\\apl-dotnet\\apl-dotnet\\apl-dotnet.csproj",
+      "projectUniqueName": "C:\\Users\\lfabbri\\projects\\api-query-language\\apl-dotnet\\apl-dotnet\\Higrow.RAQL.csproj",
+      "projectName": "Higrow.RAQL",
+      "projectPath": "C:\\Users\\lfabbri\\projects\\api-query-language\\apl-dotnet\\apl-dotnet\\Higrow.RAQL.csproj",
       "packagesPath": "C:\\Users\\lfabbri\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\lfabbri\\projects\\api-query-language\\apl-dotnet\\apl-dotnet\\obj\\",
       "projectStyle": "PackageReference",
@@ -32,7 +58,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net7.0"
+        "net6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -41,8 +67,8 @@
         "https://repo.rchrnd.com/repository/nuget-hosted/": {}
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "projectReferences": {}
         }
       },
@@ -53,8 +79,14 @@
       }
     },
     "frameworks": {
-      "net7.0": {
-        "targetAlias": "net7.0",
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "Antlr4.Runtime.Standard": {
+            "target": "Package",
+            "version": "[4.9.2, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -65,7 +97,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

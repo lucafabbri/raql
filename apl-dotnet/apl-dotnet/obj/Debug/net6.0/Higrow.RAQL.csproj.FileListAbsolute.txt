@@ -1,0 +1,17 @@
+C:\Users\lfabbri\projects\api-query-language\apl-dotnet\apl-dotnet\bin\Debug\net6.0\Higrow.RAQL.exe
+C:\Users\lfabbri\projects\api-query-language\apl-dotnet\apl-dotnet\bin\Debug\net6.0\Higrow.RAQL.deps.json
+C:\Users\lfabbri\projects\api-query-language\apl-dotnet\apl-dotnet\bin\Debug\net6.0\Higrow.RAQL.runtimeconfig.json
+C:\Users\lfabbri\projects\api-query-language\apl-dotnet\apl-dotnet\bin\Debug\net6.0\Higrow.RAQL.dll
+C:\Users\lfabbri\projects\api-query-language\apl-dotnet\apl-dotnet\bin\Debug\net6.0\Higrow.RAQL.pdb
+C:\Users\lfabbri\projects\api-query-language\apl-dotnet\apl-dotnet\bin\Debug\net6.0\Antlr4.Runtime.Standard.dll
+C:\Users\lfabbri\projects\api-query-language\apl-dotnet\apl-dotnet\obj\Debug\net6.0\Higrow.RAQL.csproj.AssemblyReference.cache
+C:\Users\lfabbri\projects\api-query-language\apl-dotnet\apl-dotnet\obj\Debug\net6.0\Higrow.RAQL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lfabbri\projects\api-query-language\apl-dotnet\apl-dotnet\obj\Debug\net6.0\Higrow.RAQL.AssemblyInfoInputs.cache
+C:\Users\lfabbri\projects\api-query-language\apl-dotnet\apl-dotnet\obj\Debug\net6.0\Higrow.RAQL.AssemblyInfo.cs
+C:\Users\lfabbri\projects\api-query-language\apl-dotnet\apl-dotnet\obj\Debug\net6.0\Higrow.RAQL.csproj.CoreCompileInputs.cache
+C:\Users\lfabbri\projects\api-query-language\apl-dotnet\apl-dotnet\obj\Debug\net6.0\Higrow.RAQL.csproj.CopyComplete
+C:\Users\lfabbri\projects\api-query-language\apl-dotnet\apl-dotnet\obj\Debug\net6.0\Higrow.RAQL.dll
+C:\Users\lfabbri\projects\api-query-language\apl-dotnet\apl-dotnet\obj\Debug\net6.0\refint\Higrow.RAQL.dll
+C:\Users\lfabbri\projects\api-query-language\apl-dotnet\apl-dotnet\obj\Debug\net6.0\Higrow.RAQL.pdb
+C:\Users\lfabbri\projects\api-query-language\apl-dotnet\apl-dotnet\obj\Debug\net6.0\Higrow.RAQL.genruntimeconfig.cache
+C:\Users\lfabbri\projects\api-query-language\apl-dotnet\apl-dotnet\obj\Debug\net6.0\ref\Higrow.RAQL.dll

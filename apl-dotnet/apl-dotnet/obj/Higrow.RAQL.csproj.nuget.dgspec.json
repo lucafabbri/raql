@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lfabbri\\projects\\api-query-language\\apl-dotnet\\apl-dotnet\\apl-dotnet.csproj": {}
+    "C:\\Users\\lfabbri\\projects\\api-query-language\\apl-dotnet\\apl-dotnet\\Higrow.RAQL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lfabbri\\projects\\api-query-language\\apl-dotnet\\apl-dotnet\\apl-dotnet.csproj": {
+    "C:\\Users\\lfabbri\\projects\\api-query-language\\apl-dotnet\\apl-dotnet\\Higrow.RAQL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lfabbri\\projects\\api-query-language\\apl-dotnet\\apl-dotnet\\apl-dotnet.csproj",
-        "projectName": "apl-dotnet",
-        "projectPath": "C:\\Users\\lfabbri\\projects\\api-query-language\\apl-dotnet\\apl-dotnet\\apl-dotnet.csproj",
+        "projectUniqueName": "C:\\Users\\lfabbri\\projects\\api-query-language\\apl-dotnet\\apl-dotnet\\Higrow.RAQL.csproj",
+        "projectName": "Higrow.RAQL",
+        "projectPath": "C:\\Users\\lfabbri\\projects\\api-query-language\\apl-dotnet\\apl-dotnet\\Higrow.RAQL.csproj",
         "packagesPath": "C:\\Users\\lfabbri\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\lfabbri\\projects\\api-query-language\\apl-dotnet\\apl-dotnet\\obj\\",
         "projectStyle": "PackageReference",
