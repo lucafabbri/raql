@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Linq.Expressions;
 using System.Reflection;
 using Antlr4.Runtime;
 using Antlr4.Runtime.Misc;
@@ -16,52 +17,66 @@ var tree = parser.clause();
 
 Console.ReadLine();
 
-public class ClauseVisitor<TEntity> : APLGrammarBaseVisitor<IQueryable<TEntity>> where TEntity : class 
+public class ClauseVisitor<TEntity> : APLGrammarBaseVisitor<Expression<Func<TEntity, bool>>> where TEntity : class 
 {
-    private readonly IQueryable<TEntity> Items;
+    private readonly Expression<Func<TEntity, bool>> Predicate;
 
-    public ClauseVisitor(IQueryable<TEntity> items)
+    public ClauseVisitor()
     {
-        Items = items;
+        Predicate = PredicateBuilder.False<>;
     }
 
-    public override IQueryable<TEntity> VisitClause([NotNull] APLGrammarParser.ClauseContext context)
+    public override Expression<Func<TEntity, bool>> VisitClause([NotNull] APLGrammarParser.ClauseContext context)
     {
         if(context.conjunction() != null)
         {
+            var clauses = context.clause();
+            if(clauses != null)
+            {
+                switch (clauses.Length)
+                {
+                    case 2:
+                        var clauseVisitor1 = new ClauseVisitor<TEntity>(Predicate).Visit(clauses.First());
+                        return clauses[0].Vis
+                    case 1:
+                    case 0:
+                    default:
+                        break;
+
+                }
+            }
         }
-        return new ClauseExpression();
     }
 }
 
-public class StringOperationVisitor<TEntity> : APLGrammarBaseVisitor<IQueryable<TEntity>> where TEntity : class
+public class StringOperationVisitor<TEntity> : APLGrammarBaseVisitor<Expression<Func<TEntity, bool>>> where TEntity : class
 {
-    private readonly IQueryable<TEntity> Items;
+    private readonly Expression<Func<TEntity, bool>> Predicate;
 
-    public StringOperationVisitor(IQueryable<TEntity> items)
+    public StringOperationVisitor(Expression<Func<TEntity, bool>> predicate)
     {
-        Items = items;
+        Predicate = predicate;
     }
 }
 
-public class NumberOperationVisitor<TEntity> : APLGrammarBaseVisitor<IQueryable<TEntity>> where TEntity : class
+public class NumberOperationVisitor<TEntity> : APLGrammarBaseVisitor<Expression<Func<TEntity, bool>>> where TEntity : class
 {
-    private readonly IQueryable<TEntity> Items;
+    private readonly Expression<Func<TEntity, bool>> Predicate;
 
-    public NumberOperationVisitor(IQueryable<TEntity> items)
+    public NumberOperationVisitor(Expression<Func<TEntity, bool>> predicate)
     {
-        Items = items;
+        Predicate = predicate;
     }
 
 }
 
-public class BoolOperationVisitor<TEntity> : APLGrammarBaseVisitor<IQueryable<TEntity>> where TEntity : class
+public class BoolOperationVisitor<TEntity> : APLGrammarBaseVisitor<Expression<Func<TEntity, bool>>> where TEntity : class
 {
-    private readonly IQueryable<TEntity> Items;
+    private readonly Expression<Func<TEntity, bool>> Predicate;
 
-    public BoolOperationVisitor(IQueryable<TEntity> items)
+    public BoolOperationVisitor(Expression<Func<TEntity, bool>> predicate)
     {
-        Items = items;
+        Predicate = predicate;
     }
 
 }
