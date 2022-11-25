@@ -11,7 +11,7 @@ namespace RAQL.NET.AspNetCore
 {
     public class RaqlQueryParam : IValidatableObject
     {
-        string message = "";
+        public string ErrorMessage { get; set; }
         public RaqlQuery? Query { get; private set; } = null;
 
         public RaqlQueryParam(string query)
@@ -22,7 +22,7 @@ namespace RAQL.NET.AspNetCore
             }
             catch(Exception e)
             {
-                message = e.Message;
+                ErrorMessage = e.Message;
                 Debug.WriteLine(e);
             }
         }
@@ -41,7 +41,7 @@ namespace RAQL.NET.AspNetCore
         {
             if (Query == null)
             {
-                yield return new ValidationResult(message, new[] { nameof(Query) });
+                yield return new ValidationResult(ErrorMessage, new[] { nameof(Query) });
             }
         }
     }

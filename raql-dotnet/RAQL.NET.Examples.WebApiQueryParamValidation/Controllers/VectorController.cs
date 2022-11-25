@@ -24,7 +24,7 @@ namespace RAQL.NET.Examples.WebApiQueryParamValidation.Controllers
             };
             if(query.Query == null)
             {
-                return BadRequest(query);
+                return BadRequest(query.ErrorMessage);
             }
             return Ok(vectors.AsQueryable().Raql(query).ToList());
         }
