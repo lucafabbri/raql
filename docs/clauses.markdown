@@ -1,6 +1,6 @@
 ---
 layout: page
 title: Clauses
-permalink: /clauses/
+permalink: {site.baseurl}/clauses/
 ---
 # Clauses
