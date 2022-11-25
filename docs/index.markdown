@@ -1,12 +1,7 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
+title: Rest Api Query Language
 ---
-
-# RAQL
-## Rest Api Query Language
 
 RAQL is a SQL-Like Query Language for Rest Api dedicated to querying Rest Api Endpoints that outputs List of Results.
 
