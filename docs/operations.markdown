@@ -1,6 +1,6 @@
 ---
 layout: page
 title: Operations
-permalink: {site.baseurl}/operations/
+permalink: /raql/operations/
 ---
 # Operations
