@@ -1,6 +1,6 @@
 ---
 layout: page
 title: Grammar
-permalink: /grammar/
+permalink: {site.baseurl}/grammar/
 ---
 # Grammar

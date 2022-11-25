@@ -1,6 +1,6 @@
 ---
 layout: page
 title: Query
-permalink: /query/
+permalink: {site.baseurl}/query/
 ---
 # Query

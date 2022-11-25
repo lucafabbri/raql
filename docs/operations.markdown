@@ -1,6 +1,6 @@
 ---
 layout: page
 title: Operations
-permalink: /operations/
+permalink: {site.baseurl}/operations/
 ---
 # Operations
