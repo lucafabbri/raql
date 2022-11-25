@@ -65,7 +65,7 @@ fragment NOT_EQUALS_SYMBOLS: '!=' | N O T WS E Q U A L S;
 fragment NOT_EQUALS: WS? NOT_EQUALS_SYMBOLS WS?;
 fragment MAJOR_SYMBOLS: '>' | G R E A T E R WS T H A N;
 fragment MAJOR: WS? MAJOR_SYMBOLS WS?;
-fragment MINOR_SYMBOLS: '>' | L O W E R WS T H A N;
+fragment MINOR_SYMBOLS: '<' | L O W E R WS T H A N;
 fragment MINOR: WS? MINOR_SYMBOLS WS?;
 fragment MAJOR_EQUALS: WS? MAJOR_EQUALS_SYMBOLS WS?;
 fragment MAJOR_EQUALS_SYMBOLS: '>=';
