@@ -1,6 +1,6 @@
 ---
 layout: page
 title: Clauses
-permalink: {site.baseurl}/clauses/
+permalink: /raql/clauses/
 ---
 # Clauses

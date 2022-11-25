@@ -1,6 +1,6 @@
 ---
 layout: page
 title: Grammar
-permalink: {site.baseurl}/grammar/
+permalink: /raql/grammar/
 ---
 # Grammar

@@ -1,6 +1,6 @@
 ---
 layout: page
 title: Query
-permalink: {site.baseurl}/query/
+permalink: /raql/query/
 ---
 # Query
