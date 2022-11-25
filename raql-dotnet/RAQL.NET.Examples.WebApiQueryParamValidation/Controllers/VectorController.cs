@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RAQL.NET.AspNetCore;
 using RAQL.NET.Linq;
+using RAQL.NET.Models;
 
 namespace RAQL.NET.Examples.WebApiQueryParamValidation.Controllers
 {
@@ -9,10 +10,8 @@ namespace RAQL.NET.Examples.WebApiQueryParamValidation.Controllers
     public class VectorController : ControllerBase
     {
         [HttpGet]
-        public ActionResult<IEnumerable<Vector>> QueryVectors([FromQuery] string q)
+        public ActionResult<IEnumerable<Vector>> QueryVectors([FromQuery] RaqlQuery q)
         {
-            RaqlQueryParam query = q;
-
             IEnumerable<Vector> vectors = new List<Vector>()
             {
                 new Vector(1,2),
@@ -22,11 +21,8 @@ namespace RAQL.NET.Examples.WebApiQueryParamValidation.Controllers
                 new Vector(2,4),
                 new Vector(6,3)
             };
-            if(query.Query == null)
-            {
-                return BadRequest(query.ErrorMessage);
-            }
-            return Ok(vectors.AsQueryable().Raql(query).ToList());
+
+            return Ok(vectors.AsQueryable().Raql(q).ToList());
         }
     }
 

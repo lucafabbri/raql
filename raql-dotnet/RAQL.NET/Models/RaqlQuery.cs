@@ -1,4 +1,6 @@
 ﻿using Antlr4.Runtime;
+using Microsoft.AspNetCore.Mvc;
+using RAQL.NET.AspNetCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +13,7 @@ namespace RAQL.NET.Models
     /// Raql Query Model
     /// </summary>
     /// <exception cref="InvalidDataException">The query is not well formed</exception>
+    [ModelBinder(BinderType = typeof(RaqlQueryModelBinder))]
     public class RaqlQuery :IAntlrErrorListener<IToken>
     {
         bool valid = true;
