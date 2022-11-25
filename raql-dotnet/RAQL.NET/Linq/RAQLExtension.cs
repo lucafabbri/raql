@@ -1,4 +1,5 @@
 ﻿using Antlr4.Runtime;
+using RAQL.NET.Models;
 using RAQL.NET.Visitors;
 using System;
 using System.Collections.Generic;
@@ -8,21 +9,15 @@ using System.Threading.Tasks;
 
 namespace RAQL.NET.Linq
 {
-  public static class AQLlExtension
-  {
-    public static IQueryable<T> Aql<T>(this IQueryable<T> items, string query) where T : class
+    public static class RaqlExtension
     {
-      AntlrInputStream inputStream = new AntlrInputStream(query);
-      RAQLLexer lexer = new RAQLLexer(inputStream);
-      CommonTokenStream tokenStream = new CommonTokenStream(lexer);
-      RAQLParser parser = new RAQLParser(tokenStream);
-      var clause = parser.clause();
-
-      if (clause != null)
-      {
-        return items.Where(new ClauseVisitor<T>().VisitClause(clause));
-      }
-      return items;
+        public static IQueryable<T> Raql<T>(this IQueryable<T> items, RaqlQuery query) where T : class
+        {
+            if (query?.Clause != null)
+            {
+                return items.Where(new ClauseVisitor<T>().VisitClause(query.Clause));
+            }
+            return items;
+        }
     }
-  }
 }

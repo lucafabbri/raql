@@ -4,11 +4,14 @@ using System.Reflection;
 using Antlr4.Runtime;
 using Antlr4.Runtime.Tree;
 using RAQL.NET.Linq;
+using RAQL.NET.Models;
 
 //var value = "(x=3 and y>10) or (x in [3,4,5] and y in [6,7,8])";
-var query = "x in [1,2] and (y equals 2 or y not equals 4";
+try
+{
+    RaqlQuery query = "x in [1,2] and (y equals 2 or y not equals 4";
 
-IEnumerable<Vector> vectors = new List<Vector>()
+    IEnumerable<Vector> vectors = new List<Vector>()
     {
         new Vector(1,2),
         new Vector(2,1),
@@ -18,9 +21,13 @@ IEnumerable<Vector> vectors = new List<Vector>()
         new Vector(6,3)
     };
 
-foreach (var vector in vectors.AsQueryable().Aql(query).ToList())
+    foreach (var vector in vectors.AsQueryable().Raql(query).ToList())
+    {
+        Console.WriteLine($"[{vector.x},{vector.y}]");
+    }
+}catch(Exception e)
 {
-  Console.WriteLine($"[{vector.x},{vector.y}]");
+    Console.WriteLine(e.Message);
 }
 
 
