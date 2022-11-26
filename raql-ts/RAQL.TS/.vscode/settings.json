@@ -1,0 +1,10 @@
+{
+    "antlr4.generation": {       
+        "mode": "external",
+        "language": "JavaScript",
+        "listeners": false,
+        "visitors": true,
+        "package": "RAQL.TS",
+        "outputDir": "Grammar"
+    }  
+}

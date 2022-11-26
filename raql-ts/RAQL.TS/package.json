@@ -1,0 +1,26 @@
+{
+  "name": "raql.ts",
+  "version": "1.0.0",
+  "description": "Rest API Query Language",
+  "main": "index.js",
+  "dependencies": {
+    "antlr4": "^4.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucafabbri/raql.git"
+  },
+  "keywords": [
+    "RAQL"
+  ],
+  "author": "Luca Fabbri <luca@higrow.it>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucafabbri/raql/issues"
+  },
+  "homepage": "https://github.com/lucafabbri/raql#readme"
+}
