@@ -1,0 +1,66 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "b7f4d6fe78d19497e5742d88a10e15d8",
+    "packages": [
+        {
+            "name": "antlr/antlr4-php-runtime",
+            "version": "0.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/antlr/antlr-php-runtime.git",
+                "reference": "12f51dcb932510481286fd14d59823ed242eda4e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/antlr/antlr-php-runtime/zipball/12f51dcb932510481286fd14d59823ed242eda4e",
+                "reference": "12f51dcb932510481286fd14d59823ed242eda4e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": "7.4 - 8.0"
+            },
+            "require-dev": {
+                "phpstan/extension-installer": "^1.0",
+                "phpstan/phpstan": "^0.11.4",
+                "slevomat/coding-standard": "^5.0.4",
+                "squizlabs/php_codesniffer": "^3.4.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Antlr\\Antlr4\\Runtime\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "PHP 7 and 8.0 runtime for ANTLR 4",
+            "keywords": [
+                "antlr4",
+                "php",
+                "runtime"
+            ],
+            "time": "2022-02-06T21:22:20+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
+}
