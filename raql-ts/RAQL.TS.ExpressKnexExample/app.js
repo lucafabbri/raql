@@ -1,5 +1,5 @@
 const express = require('express');
-const { RAQLKnex } = require('raql.ts');
+const { RAQLKnex } = require('@higrow/raql.ts');
 const database = RAQLKnex({
   client: 'sqlite3',
   connection: {

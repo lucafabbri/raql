@@ -186,8 +186,7 @@ export class KnexVisitor<TRecord extends {} = any, TResult extends {} = unknown[
       case 'not equals':
         return '!=';
       case 'equals':
-      case '=':
-        return '==';
+        return '=';
       default:
         return operator;
     }
