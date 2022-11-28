@@ -1,7 +1,7 @@
 {
     "antlr4.generation": {       
         "mode": "external",
-        "language": "JavaScript",
+        "language": "TypeScript",
         "listeners": false,
         "visitors": true,
         "package": "RAQL.TS",

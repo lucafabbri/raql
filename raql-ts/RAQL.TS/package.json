@@ -1,14 +1,29 @@
 {
-  "name": "raql.ts",
-  "version": "1.0.0",
+  "name": "@higrow/raql.ts",
+  "version": "1.1.0",
   "description": "Rest API Query Language",
-  "main": "index.js",
+  "main": "out/plugin.cjs.js",
+  "module": "out/index.js",
+  "types": "out/index.d.ts",
+  "unpkg": "out/plugin.js",
   "dependencies": {
-    "antlr4": "^4.11.0"
+    "antlr4": "^4.11.0",
+    "antlr4ts": "^0.5.0-alpha.4",
+    "knex": "^2.3.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/antlr4": "^4.11.1",
+    "@types/node": "^18.11.9",
+    "ctix": "^1.7.0",
+    "rimraf": "^3.0.2",
+    "rollup-plugin-ts": "^3.0.2",
+    "typescript": "^4.9.3"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc -p ./tsconfig.json",
+    "rollup": "npx rollup -c rollup.config.js --bundleConfigAsCjs",
+    "clean": "rimraf ./out && npx ctix create ./tsconfig.json",
+    "all": "yarn clean && yarn build && yarn rollup"
   },
   "repository": {
     "type": "git",
@@ -16,6 +31,9 @@
   },
   "keywords": [
     "RAQL"
+  ],
+  "files": [
+    "out/"
   ],
   "author": "Luca Fabbri <luca@higrow.it>",
   "license": "MIT",
