@@ -1,5 +1,6 @@
 {
     "name": "higrow/raql-php",
+    "version": "1.0.0",
     "require": {
         "antlr/antlr4-php-runtime": "^0.6.0",
         "laravel/framework": "^8.83"
