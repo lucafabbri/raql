@@ -22,8 +22,9 @@ class RAQLBuilder extends Builder
    * @param string $query
    * @return $this
    */
-  public function raql(string $query){
-    if(!empty($query)){
+  public function raql(string $query)
+  {
+    if (!empty($query)) {
       //call visitor
     }
     return $this;
