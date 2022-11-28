@@ -1,0 +1,6 @@
+{
+    "require": {
+        "antlr/antlr4-php-runtime": "^0.6.0",
+        "laravel/framework": "^8.83"
+    }
+}
