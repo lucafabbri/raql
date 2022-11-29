@@ -1,10 +1,10 @@
-<?php
+<?php 
+namespace RAQL\PHP\Eloquent;
 
-use Illuminate\Database\Eloquent\Model;
+use RAQL\PHP\Eloquent\RAQLBuilder;
 
-class RAQLModel extends Model
+trait RAQLTrait
 {
-
   /**
    * Create a new Eloquent query builder for the model with RAQL support.
    *

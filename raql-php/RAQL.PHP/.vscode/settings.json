@@ -4,7 +4,7 @@
         "language": "PHP",
         "listeners": false,
         "visitors": true,
-        "package": "RAQL\\PHP",
-        "outputDir": "Grammar"
+        "package": "RAQL\\PHP\\Grammar",
+        "outputDir": "src/Grammar"
     }  
 }

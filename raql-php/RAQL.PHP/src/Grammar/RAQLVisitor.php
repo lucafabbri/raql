@@ -1,10 +1,10 @@
 <?php
 
 /*
- * Generated from c:\Users\lfabbri\projects\api-query-language\raql-php\RAQL.g4 by ANTLR 4.9.2
+ * Generated from c:\Users\lfabbri\projects\api-query-language\raql-php\RAQL.PHP\RAQL.g4 by ANTLR 4.9.2
  */
 
-namespace RAQL\PHP;
+namespace RAQL\PHP\Grammar;
 
 use Antlr\Antlr4\Runtime\Tree\ParseTreeVisitor;
 

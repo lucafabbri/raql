@@ -1,7 +1,17 @@
 <?php
 
-use RAQL\PHP\RAQLBaseVisitor;
-use Illuminate\Database\Query\Builder;
+namespace RAQL\PHP\Visitors;
+
+use RAQL\PHP\Grammar\RAQLBaseVisitor;
+use RAQL\PHP\Grammar\Context\ClauseContext;
+use RAQL\PHP\Grammar\Context\OperationContext;
+use RAQL\PHP\Grammar\Context\String_array_operationContext;
+use RAQL\PHP\Grammar\Context\String_operationContext;
+use RAQL\PHP\Grammar\Context\Bool_array_operationContext;
+use RAQL\PHP\Grammar\Context\Bool_operationContext;
+use RAQL\PHP\Grammar\Context\Number_array_operationContext;
+use RAQL\PHP\Grammar\Context\Number_operationContext;
+use RAQL\PHP\Eloquent\RAQLBuilder;
 
 class EloquentVisitor extends RAQLBaseVisitor
 {
@@ -12,7 +22,7 @@ class EloquentVisitor extends RAQLBaseVisitor
    */
   protected $builder;
 
-  public function __construct(Builder $builder)
+  public function __construct(RAQLBuilder $builder)
   {
     $this->builder = $builder;
   }
@@ -23,7 +33,7 @@ class EloquentVisitor extends RAQLBaseVisitor
    * The default implementation returns the result of calling
    * {@see self::visitChildren()} on `context`.
    */
-  public function visitClause(RAQL\PHP\Context\ClauseContext $context)
+  public function visitClause(ClauseContext $context)
   {
     $conjunction = $context->conjunction();
     $clauses = $context->clause();
@@ -49,7 +59,7 @@ class EloquentVisitor extends RAQLBaseVisitor
    * The default implementation returns the result of calling
    * {@see self::visitChildren()} on `context`.
    */
-  public function visitOperation(RAQL\PHP\Context\OperationContext $context)
+  public function visitOperation(OperationContext $context)
   {
     $stringOperation = $context->string_operation();
     $stringArrayOperation = $context->string_array_operation();
@@ -87,10 +97,10 @@ class EloquentVisitor extends RAQLBaseVisitor
    * The default implementation returns the result of calling
    * {@see self::visitChildren()} on `context`.
    */
-  public function visitString_array_operation(RAQL\PHP\Context\String_array_operationContext $context)
+  public function visitString_array_operation(String_array_operationContext $context)
   {
     $field = $context->field()->getText();
-    $value = array_map($context->string_array()->string(), fn ($value): string => trim($value, "'"));
+    $value = array_map($context->string_array()->string(), fn ($value): string => trim($value->getText(), "'"));
 
     if ($field != null && $value != null) {
       return $this->builder->whereIn($field, $value);
@@ -105,7 +115,7 @@ class EloquentVisitor extends RAQLBaseVisitor
    * The default implementation returns the result of calling
    * {@see self::visitChildren()} on `context`.
    */
-  public function visitNumber_array_operation(RAQL\PHP\Context\Number_array_operationContext $context)
+  public function visitNumber_array_operation(Number_array_operationContext $context)
   {
     $field = $context->field()->getText();
     $numbers = $context->number_array()->number();
@@ -123,10 +133,10 @@ class EloquentVisitor extends RAQLBaseVisitor
    * The default implementation returns the result of calling
    * {@see self::visitChildren()} on `context`.
    */
-  public function visitBool_array_operation(RAQL\PHP\Context\Bool_array_operationContext $context)
+  public function visitBool_array_operation(Bool_array_operationContext $context)
   {
     $field = $context->field()->getText();
-    $value = array_map($context->bool_array()->bool(), fn ($value): bool => strtolower($value) === "true");
+    $value = array_map($context->bool_array()->bool(), fn ($value): bool => strtolower($value->getText()) === "true");
 
     if ($field != null && $value != null) {
       return $this->builder->whereIn($field, $value);
@@ -141,7 +151,7 @@ class EloquentVisitor extends RAQLBaseVisitor
    * The default implementation returns the result of calling
    * {@see self::visitChildren()} on `context`.
    */
-  public function visitString_operation(RAQL\PHP\Context\String_operationContext $context)
+  public function visitString_operation(String_operationContext $context)
   {
     $field = $context->field()->getText();
     $operator = $this->operatorToStandard(strtolower(trim($context->string_operator()->getText())));
@@ -159,7 +169,7 @@ class EloquentVisitor extends RAQLBaseVisitor
    * The default implementation returns the result of calling
    * {@see self::visitChildren()} on `context`.
    */
-  public function visitNumber_operation(RAQL\PHP\Context\Number_operationContext $context)
+  public function visitNumber_operation(Number_operationContext $context)
   {
     $field = $context->field()->getText();
     $operator = $this->operatorToStandard(strtolower(trim($context->number_operator()->getText())));
@@ -178,7 +188,7 @@ class EloquentVisitor extends RAQLBaseVisitor
    * The default implementation returns the result of calling
    * {@see self::visitChildren()} on `context`.
    */
-  public function visitBool_operation(RAQL\PHP\Context\Bool_operationContext $context)
+  public function visitBool_operation(Bool_operationContext $context)
   {
     $field = $context->field()->getText();
     $operator = $this->operatorToStandard(strtolower(trim($context->bool_operator()->getText())));

@@ -1,10 +1,10 @@
 <?php
 
 /*
- * Generated from c:\Users\lfabbri\projects\api-query-language\raql-php\RAQL.g4 by ANTLR 4.9.2
+ * Generated from c:\Users\lfabbri\projects\api-query-language\raql-php\RAQL.PHP\RAQL.g4 by ANTLR 4.9.2
  */
 
-namespace RAQL\PHP {
+namespace RAQL\PHP\Grammar {
 	use Antlr\Antlr4\Runtime\Atn\ATN;
 	use Antlr\Antlr4\Runtime\Atn\ATNDeserializer;
 	use Antlr\Antlr4\Runtime\Atn\ParserATNSimulator;
@@ -1084,14 +1084,14 @@ namespace RAQL\PHP {
 	}
 }
 
-namespace RAQL\PHP\Context {
+namespace RAQL\PHP\Grammar\Context {
 	use Antlr\Antlr4\Runtime\ParserRuleContext;
 	use Antlr\Antlr4\Runtime\Token;
 	use Antlr\Antlr4\Runtime\Tree\ParseTreeVisitor;
 	use Antlr\Antlr4\Runtime\Tree\TerminalNode;
 	use Antlr\Antlr4\Runtime\Tree\ParseTreeListener;
-	use RAQL\PHP\RAQLParser;
-	use RAQL\PHP\RAQLVisitor;
+	use RAQL\PHP\Grammar\RAQLParser;
+	use RAQL\PHP\Grammar\RAQLVisitor;
 
 	class RaqlContext extends ParserRuleContext
 	{

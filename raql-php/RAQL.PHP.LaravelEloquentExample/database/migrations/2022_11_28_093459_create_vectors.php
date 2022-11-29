@@ -15,8 +15,8 @@ class CreateVectors extends Migration
     {
         Schema::create('vectors', function (Blueprint $table) {
             $table->id();
-            $table->int('x');
-            $table->int('y');
+            $table->integer('x');
+            $table->integer('y');
             $table->timestamps();
         });
     }

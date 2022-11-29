@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Vector;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +14,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        Vector::truncate();
+
+        for ($i = 0; $i < 50; $i++) {
+            Vector::create([
+                'x' => rand(0, 50),
+                'y' => rand(0, 50),
+            ]);
+        }
     }
 }
