@@ -18,7 +18,7 @@ use Antlr\Antlr4\Runtime\Utils\BitSet;
 
 class RAQLBuilder extends Builder implements ANTLRErrorListener
 {
-  private $valid = false;
+  private $valid = true;
   private $errorMessage;
   /**
    * Create a new Eloquent query builder instance with RAQL support.
@@ -47,8 +47,8 @@ class RAQLBuilder extends Builder implements ANTLRErrorListener
       $parser = new RAQLParser($tokens);
       $parser->addErrorListener($this);
       $tree = $parser->raql();
-      if($this->valid){
-        return (new EloquentVisitor($this))->visitClause($tree->clause());
+      if ($this->valid) {
+        return (new EloquentVisitor())->visitClause($tree->clause(), $this);
       }
     }
     return $this;
@@ -60,7 +60,7 @@ class RAQLBuilder extends Builder implements ANTLRErrorListener
     int $charPositionInLine,
     string $msg,
     ?RecognitionException $e
-  ): void{
+  ): void {
     $this->valid = false;
     $this->errorMessage = "The provided query in not well formed. line: " + $line + ", position: " + $charPositionInLine + ".\n" + $msg;
   }
@@ -73,8 +73,7 @@ class RAQLBuilder extends Builder implements ANTLRErrorListener
     bool $exact,
     ?BitSet $ambigAlts,
     ATNConfigSet $configs
-  ): void{
-
+  ): void {
   }
 
   public function reportAttemptingFullContext(
@@ -84,8 +83,7 @@ class RAQLBuilder extends Builder implements ANTLRErrorListener
     int $stopIndex,
     ?BitSet $conflictingAlts,
     ATNConfigSet $configs
-  ): void{
-
+  ): void {
   }
 
   public function reportContextSensitivity(
@@ -95,7 +93,6 @@ class RAQLBuilder extends Builder implements ANTLRErrorListener
     int $stopIndex,
     int $prediction,
     ATNConfigSet $configs
-  ): void{
-
+  ): void {
   }
 }

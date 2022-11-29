@@ -1018,11 +1018,11 @@
         },
         {
             "name": "higrow/raql-php",
-            "version": "1.0.0-dev",
+            "version": "1.0.0",
             "dist": {
                 "type": "path",
                 "url": "../RAQL.PHP",
-                "reference": "c857df88c87bcaa714811c64731bd583c0680eea"
+                "reference": "870347658fb4175c651f2dd482bf67469724e427"
             },
             "require": {
                 "antlr/antlr4-php-runtime": "^0.5.1",

@@ -15,4 +15,7 @@ apply migrations to prepare database
 
 ```bash
 php artisan migrate
+php artisan db:seed
+php artisan serve
 ```
+You can play aroudn filtering some vector(x,y) from http://localhost:8000/api/vectors?q=put_here_your_ query
