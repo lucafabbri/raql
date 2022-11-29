@@ -1,7 +1,11 @@
+
 # RAQL
 ## Rest Api Query Language
 
 RAQL is a SQL-Like Query Language for Rest Api dedicated to querying Rest Api Endpoints that outputs List of Results.
+
+**DOCUMENTATION** 
+[https://lucafabbri.github.io/raql/](https://lucafabbri.github.io/raql/)
 
 ## Yet another query language
 WHy RAQL when you have GraphQL? Because Graph QL not only queries data, but also requires you to specificy which fields you want to get. 
