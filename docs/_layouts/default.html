@@ -58,7 +58,7 @@
       </a>
       <ul class="list-unstyled ps-0">
         <li class="mb-1">
-          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0"
             data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
             Getting Started
           </button>
@@ -72,14 +72,15 @@
           </div>
         </li>
         <li class="mb-1">
-          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-            data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-            RAQL.NET
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0"
+            data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="true">
+            Implementations
           </button>
-          <div class="collapse" id="dashboard-collapse">
+          <div class="collapse show" id="dashboard-collapse">
             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li><a href="{{ site.baseurl }}/dotnet/installation" class="link-dark d-inline-flex text-decoration-none rounded">Installation</a></li>
-              <li><a href="{{ site.baseurl }}/dotnet/quick-start" class="link-dark d-inline-flex text-decoration-none rounded">Quick Start</a></li>
+              <li><a href="{{ site.baseurl }}/dotnet" class="link-dark d-inline-flex text-decoration-none rounded">RAQL.NET</a></li>
+              <li><a href="{{ site.baseurl }}/php" class="link-dark d-inline-flex text-decoration-none rounded">RAQL.PHP</a></li>
+              <li><a href="{{ site.baseurl }}/js" class="link-dark d-inline-flex text-decoration-none rounded">RAQL.JS</a></li>
             </ul>
           </div>
         </li>
